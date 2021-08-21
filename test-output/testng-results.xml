@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-08-21T13:44:26 IST" name="Default suite" finished-at="2021-08-21T13:44:51 IST" duration-ms="24981">
+    <groups>
+    </groups>
+    <test started-at="2021-08-21T13:44:26 IST" name="Default test" finished-at="2021-08-21T13:44:51 IST" duration-ms="24981">
+      <class name="Weather_TestCases.Weather_Test">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Weather_TestCases.Weather_Test@2a54a73f]" started-at="2021-08-21T13:44:26 IST" name="setup" finished-at="2021-08-21T13:44:39 IST" duration-ms="12049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Weather_UI_Test()[pri:0, instance:Weather_TestCases.Weather_Test@2a54a73f]" started-at="2021-08-21T13:44:39 IST" name="Weather_UI_Test" finished-at="2021-08-21T13:44:44 IST" duration-ms="5160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Weather_UI_Test -->
+        <test-method is-config="true" signature="testcomplete()[pri:0, instance:Weather_TestCases.Weather_Test@2a54a73f]" started-at="2021-08-21T13:44:44 IST" name="testcomplete" finished-at="2021-08-21T13:44:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcomplete -->
+        <test-method signature="Weather_API_Test()[pri:1, instance:Weather_TestCases.Weather_Test@2a54a73f]" started-at="2021-08-21T13:44:44 IST" name="Weather_API_Test" finished-at="2021-08-21T13:44:47 IST" duration-ms="3265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Weather_API_Test -->
+        <test-method is-config="true" signature="testcomplete()[pri:0, instance:Weather_TestCases.Weather_Test@2a54a73f]" started-at="2021-08-21T13:44:47 IST" name="testcomplete" finished-at="2021-08-21T13:44:47 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcomplete -->
+        <test-method signature="UI_API_Comparator()[pri:3, instance:Weather_TestCases.Weather_Test@2a54a73f]" started-at="2021-08-21T13:44:47 IST" name="UI_API_Comparator" finished-at="2021-08-21T13:44:47 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_API_Comparator -->
+        <test-method is-config="true" signature="testcomplete()[pri:0, instance:Weather_TestCases.Weather_Test@2a54a73f]" started-at="2021-08-21T13:44:47 IST" name="testcomplete" finished-at="2021-08-21T13:44:47 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcomplete -->
+        <test-method is-config="true" signature="EndOfTest()[pri:0, instance:Weather_TestCases.Weather_Test@2a54a73f]" started-at="2021-08-21T13:44:47 IST" name="EndOfTest" finished-at="2021-08-21T13:44:51 IST" duration-ms="4440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EndOfTest -->
+      </class> <!-- Weather_TestCases.Weather_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
