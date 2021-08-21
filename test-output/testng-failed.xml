@@ -9,7 +9,6 @@
           <include name="EndOfTest"/>
           <include name="UI_API_Comparator"/>
           <include name="setup"/>
-          <include name="Weather_UI_Test"/>
         </methods>
       </class> <!-- Weather_TestCases.Weather_Test -->
     </classes>

@@ -28,7 +28,7 @@ public class City_Weather extends Weather_BaseClass {
 		SearchCity.sendKeys(Keys.ENTER);
 		 
 		String Temperature_UI=	driver.findElement(By.xpath("(//div[@class='temp'])[1]")).getText();
-		System.out.println("UI Temperature - "+Temperature_UI);
+		System.out.println("*********UI Temperature -> "+Temperature_UI);
 		
 	     return Temperature_UI;
 	    		 
@@ -46,6 +46,7 @@ public class City_Weather extends Weather_BaseClass {
 	         return false;
 			 //"API_Temperature and UI Tepmerature are within a specified range"	;	    	   
 	       }
+	       System.out.println("Temperature from UI and API matches correctly");
 				   return true;
 	 
 	}
