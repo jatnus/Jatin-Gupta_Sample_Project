@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import Weather_Base.Weather_BaseClass;
 import Weather_Utilities.JSONParser;
+import Weather_Utilities.TestVagrantException;
 import Web_Pages.City_Weather;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -35,7 +36,7 @@ public class Weather_Test extends Weather_BaseClass {
 
 	@Test(priority = 0)  
 	public void Weather_UI_Test() {
-		UI_Temperature = Weather.CityWeatherData("London,London,GB");
+		UI_Temperature = Weather.CityWeatherData(prop.getProperty("City"));
 
 	}
 
@@ -43,7 +44,7 @@ public class Weather_Test extends Weather_BaseClass {
 	@Test(priority = 1)
 	public void Weather_API_Test() {
 		RestAssured.baseURI = "https://api.openweathermap.org/data/2.5/weather?q";
-		String Resp = given().log().all().relaxedHTTPSValidation().param("q", "London,uk")
+		String Resp = given().log().all().relaxedHTTPSValidation().param("q", prop.getProperty("City"))
 				.param("appid", "7fe67bf08c80ded756e598d6f8fedaea").param("units", "metric").when().get().then().log()
 				.all().assertThat().statusCode(200).extract().response().asString();
 		System.out.println("************************************************************************************");
@@ -58,7 +59,20 @@ public class Weather_Test extends Weather_BaseClass {
 	@Test(priority = 3)
 	public void UI_API_ComparatorTest() {
 		boolean t=Weather.UI_API_Teperature_Comparator(UI_Temperature, API_temperature,Float.parseFloat(prop.getProperty("expected_range")));
+		    if(!t) 
+		    {
+		    	 try {
+		    		   throw new TestVagrantException("This is Custom TestVagrant Exception for Failed testcase");
+		    	   	           		
+		            } catch(TestVagrantException e) {
+		            	System.out.println("Error ->" +e.getMessage());
+		            	e.printStackTrace();
+		            	
+		            }
+		    }//else if (t) {
+		
 		Assert.assertEquals(t, true,"Temperature from UI and API does not match");
+		   // }
 	}
 
 	@AfterMethod
