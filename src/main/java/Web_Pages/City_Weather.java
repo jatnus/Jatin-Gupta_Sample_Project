@@ -28,7 +28,7 @@ public class City_Weather extends Weather_BaseClass {
 		SearchCity.sendKeys(Keys.ENTER);
 		 
 		String Temperature_UI=	driver.findElement(By.xpath("(//div[@class='temp'])[1]")).getText();
-		System.out.println("*********"+Temperature_UI);
+		System.out.println("UI Temperature - "+Temperature_UI);
 		
 	     return Temperature_UI;
 	    		 
